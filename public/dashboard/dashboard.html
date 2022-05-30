@@ -46,11 +46,11 @@
           <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
-          <li>
+          <!-- <li>
             <i class='bx bx-search'></i>
             <input type="text" placeholder="Search...">
             <span class="tooltip">Pesquisar</span>
-          </li>
+          </li> -->
           <li>
             <a href="dashboard.html">
               <i class='bx bx-grid-alt'></i>
@@ -61,12 +61,12 @@
           <li>
 
 
-            <a href="alertas.html">
+            <!-- <a href="alertas.html">
               <i class='bx bx-pie-chart-alt-2'></i>
               <span class="links_name">Analytics</span>
             </a>
             <span class="tooltip">Analytics</span>
-          </li>
+          </li> -->
 
           <li>
 
@@ -118,8 +118,8 @@
         </div>
         <div class="item-regua2 vagas-ocupadas">
 
-          <h2>22:00</h2>
-          <h3>Horário de Menor Fluxo</h3>
+          <h2>Alertas</h2>
+          <h3><span id=""></span></h3>
         </div>
         <div class="item-regua horario-pico">
           <h2>80%</h2>
@@ -201,19 +201,8 @@
 
       <!-- =========================== fim dos analytics  =======================================-->
 
-      <!-- =========================== criando os alertas =======================================-->
 
 
-    
-      
-      <!-- =========================== fim dos alertas =======================================-->
-
-
-
-      <!-- =========================== criando as kpis de fluxo =======================================-->
-
-
-      <!-- =========================== fim das kpis de fluxo =======================================-->
 
 
 
@@ -446,7 +435,7 @@
             dados.datasets[0].data.push(novoRegistro[0].chave); // incluir uma nova medida de temperatura
 
             window.grafico_linha.update();
-            alertas();
+            // alertas();
 
             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
             proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
@@ -463,28 +452,28 @@
 
     }
     
-    var valor = 500;
-    async function alertas() {
-    for (let contador = 1; contador < 600; contador++) {
-        await new Promise (receber => {
+//     var valor = 500;
+//     async function alertas() {
+//     for (let contador = 1; contador < 600; contador++) {
+//         await new Promise (receber => {
 
-        if (valor <= 300) {
-            alert(`Critico`)
-        }
-        else if (valor > 300 && valor <= 500) {
-            alert(`Cuidado`)
-        }
-        else if (valor > 500 && valor <= 750){
-            alert(`Ideal`)
-        }
-        else if (valor > 750 && valor <= 1000){
-            alert(`Lotação`)
-        }
+//         if (valor <= 300) {
+//             alert(`Critico`)
+//         }
+//         else if (valor > 300 && valor <= 500) {
+//             alert(`Cuidado`)
+//         }
+//         else if (valor > 500 && valor <= 750){
+//             alert(`Ideal`)
+//         }
+//         else if (valor > 750 && valor <= 1000){
+//             alert(`Lotação`)
+//         }
 
-        // setInterval (receber, 5000)
-    })
-    }
-}
+//         // setInterval (receber, 5000)
+//     })
+//     }
+// }
 
 
   </script>
