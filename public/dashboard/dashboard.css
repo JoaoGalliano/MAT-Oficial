@@ -363,7 +363,7 @@ nav .adm .nome{
 
      .graficos{
         margin-left: -10%;
-         margin-top: -10%;
+         margin-top: 10%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -415,14 +415,14 @@ nav .adm .nome{
         padding: 40px;
         width: 56%;
         margin: 15px;
-        height: 60%;
+        height: 75%;
         text-align: center;
         padding-top: 10px;
         border-radius: 10px;
       }
       .item-regua2 {
           padding: 50px;
-          height: 60%;
+          height: 80%;
           width: 60%;
           margin: 15px;
           text-align: center;
@@ -431,11 +431,11 @@ nav .adm .nome{
         }
 
         .item-regua h2{
-          margin-top: 30px;
+      
+          text-align: center;
         }
         .item-regua2 h2{
-     
-          margin-top: 30px;
+          text-align: center;
         }
 
        /* ================================= FIM DOS  TRES CARDS ===================================*/
@@ -451,14 +451,14 @@ nav .adm .nome{
            /* ================================= ESTILIZANDO OS ANALYTICS ===================================*/
       .card{
         margin-left: 96%;
-        margin-top: -133%;
+        margin-top: -490px;
         background-color: #000000;
         flex-direction: column;
         display:flex;
         justify-content: space-between;
         padding: 90px;
         width: 50%;
-        height: 30%;
+        height: 60%;
        color: #fff;
        border-radius: 10px;
        box-shadow: 1px 1px 0.2em #888;
