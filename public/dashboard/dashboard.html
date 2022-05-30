@@ -231,62 +231,62 @@
 
   <script>
 
-    const labels2 = [
-      'Segunda-feira',
-      'Terça-feira',
-      'Quarta-feira',
-      'Quinta-feira',
-      'Sexta-feira',
-      'Sábado',
-      'Domingo',
-    ];
+    // const labels2 = [
+    //   'Segunda-feira',
+    //   'Terça-feira',
+    //   'Quarta-feira',
+    //   'Quinta-feira',
+    //   'Sexta-feira',
+    //   'Sábado',
+    //   'Domingo',
+    // ];
 
-    const data2 = {
-      labels: labels2,
-      datasets: [{
-        label: 'Fluxo de Carros',
-        backgroundColor: '#FF4000',
-        borderColor: '#FF4000',
-        data: [340, 180, 210, 150, 190, 360, 100],
+    // const data2 = {
+    //   labels: labels2,
+    //   datasets: [{
+    //     label: 'Fluxo de Carros',
+    //     backgroundColor: '#FF4000',
+    //     borderColor: '#FF4000',
+    //     data: [340, 180, 210, 150, 190, 360, 100],
 
-      }]
-    };
+    //   }]
+    // };
 
-    const labels = [
-      '12:00',
-      '12:30',
-      '15:00',
-      '17:00',
-      '13:10',
-      '13:40',
-    ];
+    // const labels = [
+    //   '12:00',
+    //   '12:30',
+    //   '15:00',
+    //   '17:00',
+    //   '13:10',
+    //   '13:40',
+    // ];
 
-    const data = {
-      labels: labels,
-      datasets: [{
-        label: 'Vagas Ocupadas',
-        backgroundColor: '#FF4000',
-        borderColor: '#FF4000',
-        data: [60, 50, 100, 38, 64, 20],
+    // const data = {
+    //   labels: labels,
+    //   datasets: [{
+    //     label: 'Vagas Ocupadas',
+    //     backgroundColor: '#FF4000',
+    //     borderColor: '#FF4000',
+    //     data: [60, 50, 100, 38, 64, 20],
 
-      }
-      ]
-    };
-
-
-    const config = {
-      type: 'line',
-      data: data,
-      options: {
+    //   }
+    //   ]
+    // };
 
 
-      }
-    };
-    const config2 = {
-      type: 'bar',
-      data: data2,
-      options: {}
-    };
+    // const config = {
+    //   type: 'line',
+    //   data: data,
+    //   options: {
+
+
+    //   }
+    // };
+    // const config2 = {
+    //   type: 'bar',
+    //   data: data2,
+    //   options: {}
+    // };
 
 
   </script>
@@ -296,14 +296,14 @@
 
 
   <script>
-    const myChart2 = new Chart(
-      document.getElementById('myChart2'),
-      config2
-    );
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
+    // const myChart2 = new Chart(
+    //   document.getElementById('myChart2'),
+    //   config2
+    // );
+    // const myChart = new Chart(
+    //   document.getElementById('myChart'),
+    //   config
+    // );
 
   </script>
 
@@ -446,6 +446,7 @@
             dados.datasets[0].data.push(novoRegistro[0].chave); // incluir uma nova medida de temperatura
 
             window.grafico_linha.update();
+            alertas();
 
             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
             proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
@@ -461,6 +462,30 @@
         });
 
     }
+    
+    var valor = 500;
+    async function alertas() {
+    for (let contador = 1; contador < 600; contador++) {
+        await new Promise (receber => {
+
+        if (valor <= 300) {
+            alert(`Critico`)
+        }
+        else if (valor > 300 && valor <= 500) {
+            alert(`Cuidado`)
+        }
+        else if (valor > 500 && valor <= 750){
+            alert(`Ideal`)
+        }
+        else if (valor > 750 && valor <= 1000){
+            alert(`Lotação`)
+        }
+
+        // setInterval (receber, 5000)
+    })
+    }
+}
+
 
   </script>
 
